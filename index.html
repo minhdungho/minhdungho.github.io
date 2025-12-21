@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Minh Dũng - Robotics Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Borel&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">hmd</div>
+            <ul class="nav-center">
+                <li><a href="#home" data-translate="nav_home">Home</a></li>
+                <li><a href="#about" data-translate="nav_about">About</a></li>
+                <li><a href="#education" data-translate="nav_education">Education & Experience</a></li>
+                <li><a href="#projects" data-translate="nav_projects">Engineering Projects</a></li>
+                <li><a href="#skills" data-translate="nav_skills">Skillset</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="lang-switch" id="langSwitch">
+                <span id="langEN" class="active">EN</span>
+                <span>|</span>
+                <span id="langVI">VI</span>
+            </button>
+        </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="#home" data-translate="nav_home">Home</a></li>
+                <li><a href="#about" data-translate="nav_about">About</a></li>
+                <li><a href="#education" data-translate="nav_education">Education & Experience</a></li>
+                <li><a href="#projects" data-translate="nav_projects">Engineering Projects</a></li>
+                <li><a href="#skills" data-translate="nav_skills">Skillset</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <section id="home">
+            <div class="home-left">
+                <h1 data-translate="home_name">Hồ Minh Dũng</h1>
+                <h2 data-translate="home_title">Robotics and Mechatronics Engineer</h2>
+            </div>
+
+            <div class="home-right">
+                <div class="profile-photo">
+                    <img src="images/profile.jpg" alt="profile">
+                </div>
+                
+                <div class="contact-info">
+                    <a href="mailto:minhdungho21@gmail.com">minhdungho21@gmail.com</a>
+                    <a href="tel:+84372031289">+84 372031289</a>
+                    <a href="https://www.linkedin.com/in/minhdungho" target="_blank">linkedin.com/in/minhdungho</a>
+                    <div class="location" data-translate="home_location">Hanoi, Vietnam</div>
+                </div>
+
+                <div class="resume-download">
+                    <p class="resume-title" data-translate="home_resume_title">Download my resume here</p>
+                    <div class="resume-buttons">
+                        <a href="pdf/Ho_Minh_Dung_CV_en.pdf" class="btn-small" target="_blank">EN</a>
+                        <a href="pdf/Ho_Minh_Dung_CV_vi.pdf" class="btn-small" target="_blank">VI</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <h2 class="section-title" data-translate="section_about">About</h2>
+            <div class="about-content">
+                <p data-translate="about_p1">I am a Robotics and Mechatronics Engineer from Hanoi, Vietnam, with a Bachelor of Engineering (Honours) from RMIT University. I specialize in developing autonomous robotic systems for smart service applications, with expertise in autonomous navigation, computer vision, and embedded IoT integration.</p>
+                
+                <p data-translate="about_p2">Currently at Phenikaa NEO, I work on autonomous service robots for hospitals, events, and agriculture. I develop ROS2-based navigation systems and integrate computer vision on Edge AI platforms for human tracking and interaction. My work spans the complete robotics stack—from embedded firmware and wireless communication to navigation algorithms—focusing on practical systems like multi-robot collision avoidance, elevator integration for multi-floor navigation, and sensor-based human interaction.</p>
+                
+                <p data-translate="about_p3">I aspire to become an autonomous robotics engineer working across hardware design, embedded development, and navigation algorithms to develop reliable autonomous solutions for complex real-world environments.</p>
+            </div>
+        </section>
+
+        <!-- EDUCATION & EXPERIENCE -->
+        <section id="education">
+            <div class="edu-exp-grid">
+                <!-- Education Column -->
+                <div class="edu-column">
+                    <h3 class="subsection-title" data-translate="subsection_education">Education</h3>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-logo">
+                                <img src="images/rmit_logo.png" alt="rmit_logo">
+                            </div>
+                            <div class="timeline-title-group">
+                                <h3>RMIT University Vietnam</h3>
+                                <span class="date">July 2019 - April 2024</span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <p class="role">
+                                <span data-translate="edu_rmit_degree_1">Bachelor of Engineering (Honours)</span><br>
+                                <span data-translate="edu_rmit_degree_2">Robotics and Mechatronics Engineering</span>
+                            </p>
+                            <p><span data-translate="edu_rmit_honours">Honours: Second Class Division A (2A)</span><br><span data-translate="edu_rmit_gpa">GPA: 3.1/4.0</span></p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-logo">
+                                <img src="images/hnams_logo.png" alt="hnams_logo">
+                            </div>
+                            <div class="timeline-title-group">
+                                <h3>Hanoi - Amsterdam High School for the Gifted</h3>
+                                <span class="date">2015 - 2018</span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <p class="role" data-translate="edu_hnams_major">Specialized in Computer Science</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Column -->
+                <div class="exp-column">
+                    <h3 class="subsection-title" data-translate="subsection_experience">Experience</h3>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-logo">
+                                <img src="images/phenikaa_logo.png" alt="phenikaa_logo">
+                            </div>
+                            <div class="timeline-title-group">
+                                <h3 data-translate="exp_phenikaa_company">Phenikaa-X JSC / Phenikaa NEO</h3>
+                                <span class="date">July 2024 - Present</span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <p class="role-highlight">
+                                <span data-translate="exp_phenikaa_role_1">Robotics and IoT Engineer</span>
+                                <span class="role-date-inline" data-translate="exp_phenikaa_date_1">(December 2024 - Present)</span>
+                            </p>
+                            <ul>
+                                <li data-translate="exp_phenikaa_1_1">Develop embedded systems for smart service robots (medication delivery, reception, event assistance)</li>
+                                <li data-translate="exp_phenikaa_1_2">Program on Edge AI platforms for autonomous navigation, computer vision, and human-robot interaction</li>
+                                <li data-translate="exp_phenikaa_1_3">Design IoT architecture integrating multi-robot communication and elevator automation for multi-floor navigation</li>
+                            </ul>
+                            
+                            <p class="role-highlight">
+                                <span data-translate="exp_phenikaa_role_2">Robotics Engineering Intern</span>
+                                <span class="role-date-inline" data-translate="exp_phenikaa_date_2">(July 2024 - November 2024)</span>
+                            </p>
+                            <ul>
+                                <li data-translate="exp_phenikaa_2_1">Developed autonomous navigation for outdoor robot using ROS2/Nav2</li>
+                                <li data-translate="exp_phenikaa_2_2">Built odometry and control algorithm for Ackermann model</li>
+                                <li data-translate="exp_phenikaa_2_3">Integrated GPS/RTK system and path planning with reverse motion capability</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-logo">
+                                <img src="images/bosch_logo.png" alt="bosch_logo">
+                            </div>
+                            <div class="timeline-title-group">
+                                <h3>Bosch Global Software Technologies Vietnam</h3>
+                                <span class="date">November 2023 - May 2024</span>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <p class="role-highlight" data-translate="exp_bosch_role">Embedded Software Development Intern</p>
+                            <ul>
+                                <li data-translate="exp_bosch_1">Tested AUTOSAR projects focusing on UDS services over CAN protocol</li>
+                                <li data-translate="exp_bosch_2">Developed DoIP testing library and optimized FBL testing tool</li>
+                                <li data-translate="exp_bosch_3">Created automated LDF parsing and LIN protocol test generation tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h2 class="section-title" data-translate="section_projects">Engineering Projects</h2>
+
+            <div class="project-item">
+                <div class="project-images">
+                    <div class="project-image">
+                        <img src="images/project_1_1.jpg" alt="project_1_1">
+                    </div>
+                    <div class="project-image">
+                        <img src="images/project_1_2.gif" alt="project_1_2">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 data-translate="project_1_title">Medication Delivery Robot</h3>
+                    <p class="project-org" data-translate="project_1_org">Phenikaa-X JSC - Phenikaa University Hospital</p>
+                    <ul>
+                        <li data-translate="project_1_desc_1">Developed embedded firmware for IoT control board (C/ESP32)</li>
+                        <li data-translate="project_1_desc_2">Integrated Ethernet and WebSocket for system communication with SLAM and Application layers</li>
+                        <li data-translate="project_1_desc_3">Implemented 4G SIM module for network and nurse calling</li>
+                        <li data-translate="project_1_desc_4">Created ESP-Now protocol for inter-robot collision avoidance</li>
+                        <li data-translate="project_1_desc_5">Developed LoRa communication with speaker system for delivery notifications</li>
+                        <li data-translate="project_1_desc_6">Built IoT speaker device with LoRa receiver, web server configuration, and OTA updates</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-images">
+                    <div class="project-image">
+                        <img src="images/project_2_1.jpg" alt="project_2_1">
+                    </div>
+                    <div class="project-image">
+                        <img src="images/project_2_2.jpg" alt="project_2_2">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 data-translate="project_2_title">Assistance/Reception Robot</h3>
+                    <p class="project-org" data-translate="project_2_org">Phenikaa-X JSC</p>
+                    <p><strong data-translate="project_2_section_1">Edge AI Computing</strong> <em data-translate="project_2_section_1_platform">(RK3399/Aidlux)</em>:</p>
+                    <ul>
+                        <li data-translate="project_2_desc_1">Developed motor control (CAN, RS485, VESC)</li>
+                        <li data-translate="project_2_desc_2">Integrated facial recognition for person tracking and following</li>
+                        <li data-translate="project_2_desc_3">Implemented QR code recognition for event check-in</li>
+                    </ul>
+                    <p><strong data-translate="project_2_section_2">IoT Integration:</strong></p>
+                    <ul>
+                        <li data-translate="project_2_desc_4">Design real-time WebSocket interface for sensor telemetry and robot IoT device control</li>
+                        <li data-translate="project_2_desc_5">Developed elevator control system for multi-floor navigation: WT32-ETH01 for cabin control, Python server for cloud commands</li>
+                        <li data-translate="project_2_desc_6">Implemented wake-word microphone for AI conversation</li>
+                        <li data-translate="project_2_desc_7">Installed ticket printer for check-in</li>
+                        <li data-translate="project_2_desc_8">Designed 3D-printed mounting brackets</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-images">
+                    <div class="project-image">
+                        <img src="images/project_3_1.jpg" alt="project_3_1">
+                    </div>
+                    <div class="project-image">
+                        <img src="images/project_3_2.gif" alt="project_3_2">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 data-translate="project_3_title">Outdoor Autonomous Robot</h3>
+                    <p class="project-org" data-translate="project_3_org">Phenikaa-X JSC</p>
+                    <ul>
+                        <li data-translate="project_3_desc_1">Developed navigation system using ROS2 and Nav2 for outdoor environments</li>
+                        <li data-translate="project_3_desc_2">Designed CAN bus communication module for motor control</li>
+                        <li data-translate="project_3_desc_3">Built odometry and control algorithm for Ackermann model</li>
+                        <li data-translate="project_3_desc_4">Integrated GPS/RTK system</li>
+                        <li data-translate="project_3_desc_5">Developed path planning with reverse motion support</li>
+                        <li data-translate="project_3_desc_6">Completed simulation testing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-images">
+                    <div class="project-image">
+                        <img src="images/project_4_1.jpg" alt="project_4_1">
+                    </div>
+                    <div class="project-image">
+                        <img src="images/project_4_2.gif" alt="project_4_2">
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 data-translate="project_4_title">Factors Affecting Robot Accuracy in Robot-Vision Applications and Solutions</h3>
+                    <p class="project-org" data-translate="project_4_org">ABB Automation and Electrification (Vietnam) - University Research Project</p>
+                    <p><strong data-translate="project_4_section">Capstone Project:</strong></p>
+                    <ul>
+                        <li data-translate="project_4_desc_1">Researched industrial robot and vision system principles</li>
+                        <li data-translate="project_4_desc_2">Analyzed factors affecting vision-guided robot accuracy</li>
+                        <li data-translate="project_4_desc_3">Identified error sources: camera calibration, lighting, kinematic errors</li>
+                        <li data-translate="project_4_desc_4">Proposed and validated accuracy improvement solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <div class="skills-footer-wrapper">
+            <section id="skills">
+                <h2 class="section-title" data-translate="section_skills">Skillset</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 data-translate="skill_cat_1">Robotics & Automation Systems</h3>
+                        <ul>
+                            <li data-translate="skill_1_1">ROS2 & Nav2: Robot development, navigation, SLAM, path planning</li>
+                            <li data-translate="skill_1_2">Robot Control: Odometry, sensor fusion, motion planning</li>
+                            <li data-translate="skill_1_3">Computer Vision: Object detection, facial recognition, QR code recognition</li>
+                            <li data-translate="skill_1_4">Sensors: LiDAR, IMU, GPS/RTK, cameras, motor control</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-translate="skill_cat_2">Embedded Systems & IoT</h3>
+                        <ul>
+                            <li data-translate="skill_2_1">Platforms: ESP32, STM32</li>
+                            <li data-translate="skill_2_2">Protocols: CAN, RS485, WebSocket, HTTP, MQTT, SPI, I2C, UART, LoRa, ESP-Now</li>
+                            <li data-translate="skill_2_3">Modules: 4G SIM, RFID, LoRa, Radar (HLK), wake-word detection, ...</li>
+                            <li data-translate="skill_2_4">Features: OTA updates, web server configuration</li>
+                            <li data-translate="skill_2_5">Hardware: Soldering, assembly, 3D design and printing</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-translate="skill_cat_3">Programming & Tools</h3>
+                        <ul>
+                            <li data-translate="skill_3_1">C/C++, Python</li>
+                            <li data-translate="skill_3_2">Git, Confluence, Jira</li>
+                            <li data-translate="skill_3_3">Linux, Docker, ESP-IDF</li>
+                            <li data-translate="skill_3_4">SOLIDWORKS</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-translate="skill_cat_4">Engineering Skills</h3>
+                        <ul>
+                            <li data-translate="skill_4_1">System architecture design</li>
+                            <li data-translate="skill_4_2">Hardware integration and testing</li>
+                            <li data-translate="skill_4_3">Algorithm optimization</li>
+                            <li data-translate="skill_4_4">Problem solving</li>
+                            <li data-translate="skill_4_5">Technical documentation</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-translate="skill_cat_5">Languages</h3>
+                        <ul>
+                            <li data-translate="skill_5_1">Bachelor's degree instructed in English</li>
+                            <li data-translate="skill_5_2">English — IELTS 6.5 (2019)</li>
+                            <li data-translate="skill_5_3">Japanese — JLPT N5</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <h3 class="footer-title" data-translate="footer_title">Please feel free to reach out!</h3>
+                        <div class="footer-resume">
+                            <span data-translate="footer_resume">Download Resume</span>
+                            <a href="pdf/Ho_Minh_Dung_CV_en.pdf" class="btn-small" target="_blank">EN</a>
+                            <a href="pdf/Ho_Minh_Dung_CV_vi.pdf" class="btn-small" target="_blank">VI</a>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <div><a href="mailto:minhdungho21@gmail.com">minhdungho21@gmail.com</a></div>
+                        <div><a href="tel:+84372031289">+84 372031289</a></div>
+                        <div><a href="https://www.linkedin.com/in/minhdungho" target="_blank">linkedin.com/in/minhdungho</a></div>
+                        <div data-translate="home_location">Hanoi, Vietnam</div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
