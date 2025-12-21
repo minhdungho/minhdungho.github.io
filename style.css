@@ -803,21 +803,21 @@ footer {
     .home-left {
         flex: 0 0 auto;
         min-height: auto;
-        padding: 1.5rem 1rem;
+        padding: 4.5rem 2rem;
     }
 
     .home-left h1 {
-        font-size: 1.8rem;
-        margin-bottom: 0.3rem;
+        font-size: 3rem;
+        margin-bottom: 0.6rem;
     }
 
     .home-left h2 {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
 
     .home-right {
         flex: 0 0 auto;
-        padding: 1.2rem 1rem;
+        padding: 2rem 1rem;
         gap: 0.8rem;
     }
 
@@ -904,19 +904,19 @@ footer {
 
 @media (max-width: 480px) {
     .home-left {
-        padding: 1.2rem 0.8rem;
+        padding: 3.5rem 1.5rem;
     }
 
     .home-left h1 {
-        font-size: 1.6rem;
+        font-size: 2.5rem;
     }
 
     .home-left h2 {
-        font-size: 0.8rem;
+        font-size: 1.05rem;
     }
 
     .home-right {
-        padding: 1rem 0.8rem;
+        padding: 1.5rem 0.8rem;
         gap: 0.7rem;
     }
 
