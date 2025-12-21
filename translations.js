@@ -57,7 +57,7 @@ const translations = {
         exp_phenikaa_2_3: 'Tích hợp hệ thống GPS/RTK và lập kế hoạch đường đi với khả năng lùi',
         
         // Experience - Bosch
-        exp_bosch_role: 'Thực tập sinh Phát triển Phần mềm Nhúng',
+        exp_bosch_role: 'Thực tập sinh Phần mềm Nhúng',
         exp_bosch_1: 'Kiểm thử dự án AUTOSAR tập trung vào dịch vụ UDS qua giao thức CAN',
         exp_bosch_2: 'Phát triển thư viện kiểm thử DoIP và tối ưu hóa công cụ kiểm thử FBL',
         exp_bosch_3: 'Tạo công cụ phân tích LDF tự động và tạo test giao thức LIN',
