@@ -96,6 +96,7 @@ nav {
 
 /* Hamburger Menu */
 .hamburger {
+    align-self: center !important;
     display: none;
     flex-direction: column;
     gap: 4px;
@@ -138,6 +139,7 @@ nav {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    align-items: center;
 }
 
 .mobile-nav.active {
