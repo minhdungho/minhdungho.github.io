@@ -796,28 +796,61 @@ footer {
     #home {
         grid-template-columns: 1fr;
         min-height: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .home-left {
-        min-height: 50vh;
-        padding: 3rem 2rem;
+        flex: 0 0 auto;
+        min-height: auto;
+        padding: 1.5rem 1rem;
     }
 
     .home-left h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
     }
 
     .home-left h2 {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     .home-right {
-        padding: 3rem 2rem;
+        flex: 0 0 auto;
+        padding: 1.2rem 1rem;
+        gap: 0.8rem;
     }
 
     .profile-photo {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact-info {
+        gap: 0.2rem;
+    }
+
+    .contact-info a {
+        font-size: 0.85rem;
+    }
+
+    .location {
+        font-size: 0.85rem;
+    }
+
+    .resume-download {
+        margin-top: 0.2rem;
+    }
+
+    .resume-title {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .btn-small {
+        width: 60px;
+        padding: 0.4rem 0;
+        font-size: 0.8rem;
     }
 
     .section-title {
@@ -870,13 +903,45 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .home-left {
+        padding: 1.2rem 0.8rem;
+    }
+
     .home-left h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
+    }
+
+    .home-left h2 {
+        font-size: 0.8rem;
+    }
+
+    .home-right {
+        padding: 1rem 0.8rem;
+        gap: 0.7rem;
     }
 
     .profile-photo {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-info a {
+        font-size: 0.8rem;
+    }
+
+    .location {
+        font-size: 0.8rem;
+    }
+
+    .resume-title {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .btn-small {
+        width: 55px;
+        padding: 0.35rem 0;
+        font-size: 0.75rem;
     }
 
     .timeline-logo {
