@@ -1,0 +1,35 @@
+flowchart LR
+	S[GPS + IMU + Odom]
+	L[Localization]
+	A[Ackermann Controller]
+
+	subgraph P[Path Planner]
+		direction TB
+		G[GPS Logger]
+		D[Data Processing]
+		W[Waypoint Planner]
+		G --> D --> W
+	end
+
+	subgraph F[Follow Path Algorithm]
+		direction TB
+		SEG[Segmentation for Forward/Backward]
+		FB[Stanley Control]
+		SEG --> FB
+	end
+
+	S --> L
+	S --> G
+
+	L --> SEG
+	FB --> A
+	A --> S
+	W --> SEG
+
+	classDef core fill:#e8f1ff,stroke:#2563eb,stroke-width:1.2px,color:#1e293b;
+	classDef log fill:#f3e8ff,stroke:#7e57c2,stroke-width:1.2px,color:#311b92;
+	classDef follow fill:#e8fff1,stroke:#2e7d32,stroke-width:1.2px,color:#1b5e20;
+
+	class S,L,A core;
+	class G,D,W log;
+	class SEG,FB follow;

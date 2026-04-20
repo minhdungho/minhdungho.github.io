@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slide Player</title>
+	<style>
+		:root {
+			--bg: #0f1116;
+			--panel: #171b22;
+			--text: #e6eaf2;
+			--muted: #a7b0c0;
+			--accent: #6ea8fe;
+		}
+
+		* { box-sizing: border-box; }
+
+		html, body {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			background: #ffffff;
+			color: var(--text);
+			font-family: "JetBrains Mono", Consolas, monospace;
+			overflow: hidden;
+		}
+
+		.player {
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+			display: grid;
+			place-items: center;
+		}
+
+		.stage {
+			position: relative;
+			width: min(100vw, calc(100vh * 16 / 9));
+			height: min(100vh, calc(100vw * 9 / 16));
+			overflow: hidden;
+			border-radius: 0;
+			background: #ffffff;
+			box-shadow: none;
+		}
+
+		.slide-frame {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1600px;
+			height: 900px;
+			border: 0;
+			transform-origin: top left;
+			transform: translateX(0%);
+		}
+
+		.click-zone {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 50%;
+			z-index: 15;
+		}
+
+		.click-zone.left {
+			left: 0;
+			cursor: w-resize;
+		}
+
+		.click-zone.right {
+			right: 0;
+			cursor: e-resize;
+		}
+	</style>
+</head>
+<body>
+	<main class="player">
+		<section class="stage" id="stage">
+			<iframe id="frameA" class="slide-frame" title="Slide frame A"></iframe>
+			<iframe id="frameB" class="slide-frame" title="Slide frame B"></iframe>
+			<div class="click-zone left" id="leftZone" aria-label="Previous slide"></div>
+			<div class="click-zone right" id="rightZone" aria-label="Next slide"></div>
+		</section>
+	</main>
+
+	<script>
+		const SLIDE_W = 1600;
+		const SLIDE_H = 900;
+
+		function applyScale() {
+			const stage = document.getElementById('stage');
+			const sw = stage.offsetWidth;
+			const sh = stage.offsetHeight;
+			const scale = Math.min(sw / SLIDE_W, sh / SLIDE_H);
+			document.querySelectorAll('.slide-frame').forEach(f => {
+				const tx = f._tx ?? 0;
+				f.style.transform = `translateX(${tx * SLIDE_W}px) scale(${scale})`;
+				f._scale = scale;
+			});
+		}
+
+		new ResizeObserver(applyScale).observe(document.getElementById('stage'));
+
+		const slides = [
+			"slide_1.html",
+			"slide_2.html",
+			"slide_3.html",
+			"slide_4.html",
+			"slide_5.html",
+			"slide_6.html",
+			"slide_7.html"
+		];
+
+		const frameA = document.getElementById("frameA");
+		const frameB = document.getElementById("frameB");
+		const leftZone = document.getElementById("leftZone");
+		const rightZone = document.getElementById("rightZone");
+
+		let active = frameA;
+		let inactive = frameB;
+		let current = 0;
+		let isAnimating = false;
+
+		function setTx(frame, tx) {
+			frame._tx = tx;
+			const scale = frame._scale ?? 1;
+			frame.style.transform = `translateX(${tx * SLIDE_W}px) scale(${scale})`;
+		}
+
+		frameA.src = slides[current];
+		frameA._tx = 0;
+		frameB._tx = 2;
+		applyScale();
+
+		function goTo(index, direction) {
+			if (isAnimating || index === current || index < 0 || index >= slides.length) {
+				return;
+			}
+
+			isAnimating = true;
+			inactive.src = slides[index];
+
+			inactive.onload = () => {
+				inactive.onload = null;
+
+				const scale = active._scale ?? 1;
+				inactive._scale = scale;
+
+				active.style.transition = 'none';
+				inactive.style.transition = 'none';
+				active.style.transform = `translateX(0px) scale(${scale})`;
+				inactive.style.transform = `translateX(${direction * SLIDE_W}px) scale(${scale})`;
+				inactive._tx = direction;
+
+				requestAnimationFrame(() => {
+					active.style.transition = 'transform 320ms ease';
+					inactive.style.transition = 'transform 320ms ease';
+					active.style.transform = `translateX(${-direction * SLIDE_W}px) scale(${scale})`;
+					inactive.style.transform = `translateX(0px) scale(${scale})`;
+					active._tx = -direction;
+					inactive._tx = 0;
+				});
+
+				const finish = () => {
+					active.removeEventListener('transitionend', finish);
+					active.style.transition = 'none';
+					inactive.style.transition = 'none';
+					active.style.transform = `translateX(${2 * SLIDE_W}px) scale(${scale})`;
+					active._tx = 2;
+					[active, inactive] = [inactive, active];
+					current = index;
+					isAnimating = false;
+				};
+
+				active.addEventListener('transitionend', finish, { once: true });
+			};
+		}
+
+		function nextSlide() {
+			if (current < slides.length - 1) {
+				goTo(current + 1, 1);
+			}
+		}
+
+		function prevSlide() {
+			if (current > 0) {
+				goTo(current - 1, -1);
+			}
+		}
+
+		rightZone.addEventListener("click", nextSlide);
+		leftZone.addEventListener("click", prevSlide);
+
+		document.addEventListener("keydown", (event) => {
+			if (event.key === "ArrowRight" || event.key === " ") {
+				event.preventDefault();
+				nextSlide();
+			}
+			if (event.key === "ArrowLeft") {
+				event.preventDefault();
+				prevSlide();
+			}
+		});
+	</script>
+</body>
+</html>

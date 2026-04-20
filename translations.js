@@ -36,10 +36,16 @@ const translations = {
         about_p3: 'Mục tiêu của tôi là trở thành kỹ sư robot tự hành làm việc xuyên suốt thiết kế phần cứng, phát triển nhúng và thuật toán điều hướng để phát triển giải pháp tự hành tin cậy cho môi trường thực tế phức tạp.',
         
         // Education
+        edu_phenikaa_uni_name: 'Trường Đại học Phenikaa',
+        edu_phenikaa_uni_date: 'Tháng 12/2025 - Hiện tại',
+        edu_phenikaa_uni_degree_1: 'Thạc sĩ Kỹ thuật',
+        edu_phenikaa_uni_degree_2: 'Ngành Cơ khí Động lực',
+        edu_phenikaa_uni_status: 'Đang theo học',
         edu_rmit_degree_1: 'Cử nhân Kỹ thuật',
         edu_rmit_degree_2: 'Ngành Kỹ thuật Robot và Cơ điện tử',
-        edu_rmit_honours: 'Loại Giỏi: Hạng Nhì Bậc A (2A)',
+        edu_rmit_honours: 'Loại Giỏi: Hạng 2A',
         edu_rmit_gpa: 'GPA: 3.1/4.0',
+        edu_hnams_date: 'Tháng 7/2015 - Tháng 6/2018',
         edu_hnams_major: 'Chuyên Tin',
         
         // Experience - Phenikaa
@@ -105,30 +111,30 @@ const translations = {
         
         // Skills
         skill_cat_1: 'Hệ thống Robot & Tự động hóa',
-        skill_1_1: 'ROS2 & Nav2: Phát triển robot, điều hướng, SLAM, lập kế hoạch đường đi',
-        skill_1_2: 'Điều khiển Robot: Odometry, fusion cảm biến, lập kế hoạch chuyển động',
+        skill_1_1: 'ROS2 & Nav2: Phát triển robot, điều hướng tự hành, SLAM, lập kế hoạch đường đi',
+        skill_1_2: 'Điều khiển Robot: Odometry, sensor fusion, lập kế hoạch chuyển động, trajectory generation',
         skill_1_3: 'Thị giác máy tính: Phát hiện đối tượng, nhận diện khuôn mặt, nhận diện mã QR',
-        skill_1_4: 'Cảm biến: LiDAR, IMU, GPS/RTK, camera, điều khiển động cơ',
         
         skill_cat_2: 'Hệ thống Nhúng & IoT',
         skill_2_1: 'Nền tảng: ESP32, STM32',
-        skill_2_2: 'Giao thức: CAN, RS485, WebSocket, HTTP, MQTT, SPI, I2C, UART, LoRa, ESP-Now',
-        skill_2_3: 'Module: 4G SIM, RFID, LoRa, Radar (HLK), nhận diện wake-word, ...',
-        skill_2_4: 'Tính năng: Cập nhật OTA, cấu hình web server',
+        skill_2_2: 'Giao thức: CAN, RS485, WebSocket, MQTT, LoRa, ESP-Now, SPI, I2C, UART',
+        skill_2_3: 'Module & Tính năng: 4G SIM, RFID, Radar, nhận diện wake-word, cập nhật OTA',
         skill_2_5: 'Phần cứng: Hàn, lắp ráp, thiết kế và in 3D',
         
         skill_cat_3: 'Lập trình & Công cụ',
         skill_3_1: 'C/C++, Python',
-        skill_3_2: 'Git, Confluence, Jira',
-        skill_3_3: 'Linux, Docker, ESP-IDF',
-        skill_3_4: 'SOLIDWORKS',
+        skill_3_2: 'ROS2: Nav2, TF2, EKF, ros2_control, Gazebo, RViz',
+        skill_3_3: 'Git, Confluence, Jira',
+        skill_3_4: 'Linux, Docker, ESP-IDF',
+        skill_3_5: 'SOLIDWORKS',
         
         skill_cat_4: 'Kỹ năng Kỹ thuật',
         skill_4_1: 'Thiết kế kiến trúc hệ thống',
         skill_4_2: 'Tích hợp và kiểm thử phần cứng',
-        skill_4_3: 'Tối ưu hóa thuật toán',
-        skill_4_4: 'Giải quyết vấn đề',
+        skill_4_3: 'Kiểm thử mô phỏng và triển khai thực tế',
+        skill_4_4: 'Tối ưu hóa thuật toán & phân tích nguồn gốc lỗi',
         skill_4_5: 'Viết tài liệu kỹ thuật',
+        skill_4_6: 'Phân tích, thiết kế cơ khí & chế tạo mẫu 3D',
         
         skill_cat_5: 'Ngôn ngữ',
         skill_5_1: 'Học đại học bằng tiếng Anh',

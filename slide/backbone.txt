@@ -1,0 +1,69 @@
+Slide 1 — Title
+
+Speaker Notes (0:00–0:12)
+
+“Hello, my name is Ho Minh Dung. I’m a Robotics and Mechatronics Engineer based in Hanoi, Vietnam.”
+“Today I’ll briefly introduce my background, then share two projects, and finally explain why I’m applying to VinMotion.”
+
+
+Slide 2 — Academic and Professional Overview
+
+Speaker Notes (0:12–0:38)
+
+“I graduated from RMIT University Vietnam with a Bachelor of Engineering in Robotics and Mechatronics.”
+“At Bosch, I was an Embedded Software Intern and mainly worked with automotive communication and testing workflow.”
+“At PhenikaaNeo and Phenikaa-X, I work on autonomous service robots across embedded systems, IoT, and robot integration.”
+"My current scope includes embedded systems and IoT architecture for service robots, 
+as well as parts of the robot autonomy stack."
+"My core strengths are ROS2 and Nav2 integration, embedded and IoT work across hardware and software, 
+and practical deployment focus on reliability and on-site debugging."
+
+Slide 3 — Project A Overview: Service Robot Deployment
+
+Speaker Notes (0:38–1:10)
+
+“Project A is a service robot used in hospitals and event environments.”
+“The system supports delivery and front-desk assistance in daily operation.”
+“A key challenge is multi-floor workflow, where elevator coordination has to be reliable during live tasks.”
+“Another challenge is real-time status exchange between embedded devices and robot software.”
+
+
+Slide 4 — Project A: My Role and Outcomes
+
+Speaker Notes (1:10–1:38)
+
+“My role focused on embedded and system integration.”
+“I developed ESP32 firmware for the robot control board and built WebSocket-based communication across layers.”
+“I also worked on elevator integration through a cabin control board, and a Python control server that allow remote control via cloud.”
+“This helped make communication between modules more stable in real deployments.”
+
+
+Slide 5 — Project B Overview: Outdoor Autonomous Robot
+
+Speaker Notes (1:38–2:12)
+
+“Project B is an outdoor autonomous robot focused on navigation using gps.”
+“I built the navigation stack on ROS2 and Nav2, adapted for Ackermann steering and custom odometry and control.”
+“The main focus here is stable outdoor path following, with support for localization, reverse maneuvers, 
+and low-level motor control.”
+
+
+Slide 6 — Project B: My Role and Outcomes
+
+Speaker Notes (2:12–2:45)
+
+“My role covered localization and the planning and control pipeline.”
+“I implemented GPS/RTK, IMU, and odometry fusion, then tuned calibration and fusion for better outdoor consistency.”
+“I also designed the waypoint flow from logged GPS data and implemented forward and reverse segmentation with Stanley-based tracking.”
+“Testing in simulation first helped reduce risk before field tests.”
+
+
+Slide 7 — Why VinMotion
+
+Speaker Notes (2:45–3:05)
+
+"I'm applying to VinMotion because I want to work on robots that run in real environments, where reliability and 
+safety actually matter."
+"The work here spans navigation, embedded systems, and sensor integration — which matches what I've been building and deploying."
+"I'm comfortable working across hardware and software layers, and I think that helps a lot in this kind of product work."
+"Thanks for your time — happy to go deeper on any of this."
